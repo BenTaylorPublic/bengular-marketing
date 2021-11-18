@@ -1,14 +1,15 @@
 //Color palette
 $grey-background: #232323;
+$grey-feature-border: #444444;
 $white-text: #EFEFEF;
 
-
+//Content
 body {
   background-color: $grey-background;
   color: $white-text;
 }
 
-h1 {
+h1, h2 {
   text-align: center;
 }
 
@@ -17,4 +18,32 @@ h1 {
   text-align: center;
   margin-left: auto;
   margin-right: auto;
+}
+
+.borderBottom {
+  border-bottom: $grey-feature-border 1px solid;
+}
+
+#keyFeatures {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.keyFeature {
+  @extend .borderBottom;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-bottom: 5px;
+
+  &:nth-of-type(even) {
+    flex-wrap: wrap-reverse;
+  }
+
+  > div {
+    height: 180px;
+    min-width: 300px;
+    width: 50%;
+  }
 }
