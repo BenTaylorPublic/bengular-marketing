@@ -1,3 +1,13 @@
+//Color palette
+$grey-background: #232323;
+$white-text: #EFEFEF;
+
+
+body {
+  background-color: $grey-background;
+  color: $white-text;
+}
+
 h1 {
-    color: purple;
+  text-align: center;
 }
