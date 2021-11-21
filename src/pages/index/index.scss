@@ -3,14 +3,21 @@ $grey-background: #232323;
 $grey-feature-border: #444444;
 $white-text: #EFEFEF;
 
+//Sizing
+$keyFeatureHeight: 220px;
+$keyFeatureWidth: 440px;
+
 //Content
 body {
   background-color: $grey-background;
   color: $white-text;
+  font-family: Menlo, monospace;
+  min-width: $keyFeatureWidth;
 }
 
 h1, h2 {
   text-align: center;
+  margin: 0;
 }
 
 #description {
@@ -25,7 +32,7 @@ h1, h2 {
 }
 
 #keyFeatures {
-  max-width: 800px;
+  max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -35,15 +42,26 @@ h1, h2 {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  padding-bottom: 5px;
+  padding-bottom: 10px;
+  padding-top: 10px;
 
   &:nth-of-type(even) {
     flex-wrap: wrap-reverse;
   }
 
   > div {
-    height: 180px;
-    min-width: 300px;
+    height: $keyFeatureHeight;
+    min-width: $keyFeatureWidth;
     width: 50%;
+    position: relative;
+
+    img {
+      height: $keyFeatureHeight;
+      width: $keyFeatureWidth;
+      margin: auto;
+      position: absolute;
+      left: 0;
+      right: 0;
+    }
   }
 }
