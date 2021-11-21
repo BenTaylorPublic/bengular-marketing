@@ -1,5 +1,6 @@
 //Color palette
 $grey-background: #232323;
+$grey-alternate-background: #404040;
 $grey-feature-border: #444444;
 $white-text: #EFEFEF;
 
@@ -58,6 +59,7 @@ h1, h2 {
       padding-right: 10px;
       padding-left: 10px;
     }
+
     &:not(.featureDescription) {
       height: $keyFeatureHeight;
     }
@@ -69,6 +71,40 @@ h1, h2 {
       position: absolute;
       left: 0;
       right: 0;
+    }
+  }
+}
+
+#howToStart {
+  position: relative;
+  padding-bottom: 200px;
+
+  p {
+    text-align: center;
+  }
+
+  pre {
+    text-align: center;
+    font-family: "Courier New", monospace;
+    background-color: $grey-alternate-background;
+    color: $white-text;
+    width: 300px;
+    margin: auto;
+  }
+
+  .linksBox {
+    display: flex;
+    justify-content: center;
+
+    a {
+      border: 1px solid white;
+      padding: 5px;
+      border-radius: 5px;
+      width: 100px;
+      color: $white-text;
+      text-decoration: none;
+      text-align: center;
+      margin: 20px;
     }
   }
 }
