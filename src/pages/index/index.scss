@@ -41,7 +41,7 @@ h1, h2 {
   @extend .borderBottom;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-evenly;
   padding-bottom: 10px;
   padding-top: 10px;
 
@@ -50,10 +50,17 @@ h1, h2 {
   }
 
   > div {
-    height: $keyFeatureHeight;
     min-width: $keyFeatureWidth;
-    width: 50%;
+    max-width: 50%;
     position: relative;
+
+    &.featureDescription {
+      padding-right: 10px;
+      padding-left: 10px;
+    }
+    &:not(.featureDescription) {
+      height: $keyFeatureHeight;
+    }
 
     img {
       height: $keyFeatureHeight;
