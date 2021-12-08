@@ -7,6 +7,6 @@
   "componentsDirectory": "./src/components/",
   "assetsDirectory": "./src/assets/",
   "bengularVersion": "v1.2.0",
-  "hostedPath": "",
+  "hostedPath": "/bengular-marketing/",
   "rootHtml": "index"
 }
