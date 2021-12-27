@@ -15,10 +15,10 @@
     This <strong>isn't</strong> another SPA framework, rather a modern approach to multi-page website development.
 </p>
 <div id="keyFeatures">
-    <h2 class="borderBottom">Key Features</h2>
+    <h2>Key Features</h2>
     <div class="keyFeature">
         <div class="featureDescription">
-            <h3>Typescript & ESLint</h3>
+            <h3 id="firstFeatureHeading">Typescript & ESLint</h3>
             <p>
                 Types, linting, and autocomplete are essential in building larger websites.
                 Every page in a Bengular project has a javascript bundle, built from the typescript in the associated
@@ -27,10 +27,11 @@
                 services and logic.
             </p>
         </div>
-        <div><img src="/bengular/assets/ts.png" alt="Typescript example"></div>
+        <div class="featureImage">
+            <img src="/bengular/assets/ts.png" alt="Typescript example">
+        </div>
     </div>
     <div class="keyFeature">
-        <div><img src="/bengular/assets/components.png" alt="Components example"></div>
         <div class="featureDescription">
             <h3>Components</h3>
             <p>
@@ -38,6 +39,9 @@
                 headers footers and nav bars.
                 Components are injected into the referencing pages at build time, which means no overhead!
             </p>
+        </div>
+        <div class="featureImage">
+            <img src="/bengular/assets/components.png" alt="Components example">
         </div>
     </div>
     <div class="keyFeature">
@@ -49,23 +53,27 @@
                 I recommend using the shared scss file to style your shared components!
             </p>
         </div>
-        <div><img src="/bengular/assets/scss.png" alt="Scss example"></div>
+        <div class="featureImage">
+            <img src="/bengular/assets/scss.png" alt="Scss example">
+        </div>
     </div>
     <div class="keyFeature">
-        <div><img src="/bengular/assets/live_reload.png" alt="Scss example"></div>
         <div class="featureDescription">
             <h3>Live reload</h3>
             <p>
                 While in development, Bengular will live refresh any connected browser, when files are saved.
             </p>
         </div>
+        <div class="featureImage">
+            <img src="/bengular/assets/live_reload.png" alt="Scss example">
+        </div>
     </div>
 </div>
 <div id="howToStart">
     <h2>How to start</h2>
     <p>Simply install the Bengular CLI globally through npm with</p>
-    <pre>npm install -g bengular</pre>
-    <pre>bengular --help</pre>
+    <p class="code">npm install -g bengular</p>
+    <p class="code">bengular --help</p>
     <div class="linksBox">
         <a href="https://www.npmjs.com/package/bengular">npm</a>
         <a href="https://github.com/BenTaylorPublic/bengular">View Repo</a>

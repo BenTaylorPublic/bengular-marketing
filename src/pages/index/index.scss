@@ -5,8 +5,8 @@ $grey-feature-border: #444444;
 $white-text: #EFEFEF;
 
 //Sizing
-$keyFeatureHeight: 220px;
-$keyFeatureWidth: 440px;
+$keyFeatureHeight: 250px;
+$keyFeatureWidth: 500px;
 
 //Content
 body {
@@ -14,6 +14,7 @@ body {
   color: $white-text;
   font-family: Menlo, monospace;
   min-width: $keyFeatureWidth;
+  font-size: 16px;
 }
 
 h1, h2 {
@@ -21,8 +22,20 @@ h1, h2 {
   margin: 0;
 }
 
+h1 {
+  font-size: 40px;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+h3 {
+  font-size: 20px;
+}
+
 #description {
-  max-width: 400px;
+  max-width: 90%;
   text-align: center;
   margin-left: auto;
   margin-right: auto;
@@ -40,39 +53,105 @@ h1, h2 {
 
 .keyFeature {
   @extend .borderBottom;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
   padding-bottom: 10px;
   padding-top: 10px;
 
-  &:nth-of-type(even) {
-    flex-wrap: wrap-reverse;
+  .featureImage,
+  .featureDescription {
+    min-width: $keyFeatureWidth;
+    position: relative;
   }
 
-  > div {
-    min-width: $keyFeatureWidth;
-    max-width: 50%;
-    position: relative;
+  .featureDescription {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
 
-    &.featureDescription {
-      padding-right: 10px;
-      padding-left: 10px;
-    }
-
-    &:not(.featureDescription) {
-      height: $keyFeatureHeight;
-    }
+  .featureImage {
+    min-height: $keyFeatureHeight;
 
     img {
-      height: $keyFeatureHeight;
-      width: $keyFeatureWidth;
       margin: auto;
       position: absolute;
       left: 0;
       right: 0;
     }
   }
+}
+
+//Two columns
+@media (min-width: 2*$keyFeatureWidth) {
+
+  h2 {
+    margin-top: 50px;
+  }
+
+  .keyFeature {
+    display: flex;
+    justify-content: space-evenly;
+
+    &:nth-of-type(even) {
+      .featureImage {
+        order: 1;
+      }
+
+      .featureDescription {
+        order: 2;
+      }
+    }
+
+    .featureImage,
+    .featureDescription {
+      max-width: 50%;
+    }
+
+    .featureImage {
+      img {
+        height: $keyFeatureHeight;
+        width: $keyFeatureWidth;
+      }
+    }
+  }
+
+}
+
+//Single column
+@media (max-width: 2*$keyFeatureWidth) {
+
+  h2 {
+    margin-top: 150px;
+  }
+
+  h3 {
+    margin-top: 150px;
+
+    &#firstFeatureHeading {
+      margin-top: 75px;
+    }
+  }
+
+  .keyFeature {
+    display: block;
+    text-align: center;
+
+    .featureImage,
+    .featureDescription {
+      max-width: 90%;
+      margin: auto;
+    }
+
+    .featureImage {
+      margin-top: 75px;
+      width: 90vw;
+      height: 45vw;
+
+      img {
+        max-width: 100%;
+        max-height: 100%;
+      }
+    }
+  }
+
 }
 
 #howToStart {
@@ -83,13 +162,13 @@ h1, h2 {
     text-align: center;
   }
 
-  pre {
+  .code {
     text-align: center;
     font-family: "Courier New", monospace;
     background-color: $grey-alternate-background;
     color: $white-text;
-    width: 300px;
     margin: auto;
+    max-width: 90%;
   }
 
   .linksBox {

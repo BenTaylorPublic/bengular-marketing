@@ -8,5 +8,5 @@
   "assetsDirectory": "./src/assets/",
   "bengularVersion": "v1.2.0",
   "hostedPath": "/bengular/",
-  "rootHtml": "index"
+  "rootHtml": "/bengular/index.html"
 }
