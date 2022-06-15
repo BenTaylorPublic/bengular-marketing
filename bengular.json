@@ -6,7 +6,8 @@
   "prodDirectory": "./docs/",
   "componentsDirectory": "./src/components/",
   "assetsDirectory": "./src/assets/",
-  "bengularVersion": "v1.2.0",
+  "bengularVersion": "v1.3.0",
   "hostedPath": "/bengular/",
-  "rootHtml": "/bengular/index.html"
+  "rootHtml": "/bengular/index.html",
+  "port": 4200
 }

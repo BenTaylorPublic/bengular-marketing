@@ -7,6 +7,8 @@ $white-text: #EFEFEF;
 //Sizing
 $keyFeatureHeight: 250px;
 $keyFeatureWidth: 500px;
+$bodyMargin: 8px;
+$breakpoint: 2*$keyFeatureWidth + 2*$bodyMargin;
 
 //Content
 body {
@@ -14,10 +16,13 @@ body {
   color: $white-text;
   font-family: Menlo, monospace;
   min-width: $keyFeatureWidth;
-  font-size: 16px;
+  font-size: 14px;
+  margin: $bodyMargin;
+  overflow-x: hidden;
 }
 
 #logo {
+  padding-top: 40px;
   margin: auto;
   width: 100px;
 }
@@ -36,7 +41,7 @@ h2 {
 }
 
 h3 {
-  font-size: 20px;
+  font-size: 16px;
 }
 
 #description {
@@ -68,8 +73,8 @@ h3 {
   }
 
   .featureDescription {
-    padding-right: 10px;
-    padding-left: 10px;
+    margin-right: 10px;
+    margin-left: 10px;
   }
 
   .featureImage {
@@ -85,7 +90,7 @@ h3 {
 }
 
 //Two columns
-@media (min-width: 2*$keyFeatureWidth) {
+@media (min-width: $breakpoint) {
 
   h2 {
     margin-top: 50px;
@@ -121,23 +126,18 @@ h3 {
 }
 
 //Single column
-@media (max-width: 2*$keyFeatureWidth) {
+@media (max-width: $breakpoint) {
 
   h2 {
-    margin-top: 150px;
+    margin-top: 100px;
   }
 
   h3 {
-    margin-top: 150px;
-
-    &#firstFeatureHeading {
-      margin-top: 75px;
-    }
+    margin-top: 30px;
   }
 
   .keyFeature {
     display: block;
-    text-align: center;
 
     .featureImage,
     .featureDescription {
@@ -146,7 +146,7 @@ h3 {
     }
 
     .featureImage {
-      margin-top: 75px;
+      margin-top: 25px;
       width: 90vw;
       height: 45vw;
 
