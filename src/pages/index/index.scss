@@ -2,7 +2,9 @@
 $grey-background: #232323;
 $grey-alternate-background: #404040;
 $grey-feature-border: #444444;
-$white-text: #EFEFEF;
+$white-text: #D5D5D5;
+$blue-text1: #9DAFFF;
+$blue-text2: #5067C2;
 
 //Sizing
 $keyFeatureHeight: 250px;
@@ -34,14 +36,17 @@ h1, h2 {
 
 h1 {
   font-size: 40px;
+  color: #EFEFEF;
 }
 
 h2 {
   font-size: 30px;
+  color: $blue-text1;
 }
 
 h3 {
   font-size: 16px;
+  color: $blue-text2;
 }
 
 #description {
@@ -127,15 +132,6 @@ h3 {
 
 //Single column
 @media (max-width: $breakpoint) {
-
-  h2 {
-    margin-top: 100px;
-  }
-
-  h3 {
-    margin-top: 30px;
-  }
-
   .keyFeature {
     display: block;
 
@@ -190,5 +186,35 @@ h3 {
       text-align: center;
       margin: 20px;
     }
+  }
+}
+
+body:not(.mobile) {
+  h2 {
+    margin-top: 20px;
+  }
+
+  h3 {
+    margin-top: 10px;
+  }
+
+  .keyFeature {
+    text-align: left;
+    line-height: 25px;
+  }
+}
+
+body.mobile {
+  h2 {
+    margin-top: 100px;
+  }
+
+  h3 {
+    margin-top: 30px;
+  }
+
+  .keyFeature {
+    text-align: center;
+    line-height: 56px;
   }
 }
