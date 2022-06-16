@@ -7,7 +7,14 @@ class IndexView {
     }
 
     private static detectMobiles(): void {
-        if (window.matchMedia("only screen and (max-width: 760px)").matches) {
+        const toMatch = [
+            /Android/i,
+            /iPhone/i,
+        ];
+
+        if (toMatch.some((toMatchItem) => {
+            return navigator.userAgent.match(toMatchItem);
+        })) {
             //Conditional script here
             this.isMobile = true;
             document.body.classList.add("mobile");
