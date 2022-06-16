@@ -21,6 +21,10 @@ body {
   font-size: 14px;
   margin: $bodyMargin;
   overflow-x: hidden;
+  text-size-adjust: none;
+  -ms-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  -moz-text-size-adjust: none;
 }
 
 #logo {
