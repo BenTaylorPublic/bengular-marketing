@@ -3,7 +3,6 @@ class IndexView {
 
     public static initialize(): void {
         this.detectMobiles();
-        this.setKeyFeatureHeight();
     }
 
     private static detectMobiles(): void {
@@ -18,16 +17,6 @@ class IndexView {
             //Conditional script here
             this.isMobile = true;
             document.body.classList.add("mobile");
-        }
-    }
-
-    private static setKeyFeatureHeight(): void {
-        if (!this.isMobile) {
-            return;
-        }
-        const keyFeatures: HTMLElement[] = Array.from(<HTMLElement[]><any>document.getElementsByClassName("keyFeature"));
-        for (const keyFeature of keyFeatures) {
-            keyFeature.style.height = window.innerHeight + "px";
         }
     }
 }

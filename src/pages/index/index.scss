@@ -18,13 +18,16 @@ body {
   color: $white-text;
   font-family: Menlo, monospace;
   min-width: $keyFeatureWidth;
-  font-size: 14px;
   margin: $bodyMargin;
   overflow-x: hidden;
   text-size-adjust: none;
   -ms-text-size-adjust: none;
   -webkit-text-size-adjust: none;
   -moz-text-size-adjust: none;
+}
+
+p {
+  margin: 0px;
 }
 
 #logo {
@@ -39,17 +42,20 @@ h1, h2 {
 }
 
 h1 {
-  font-size: 40px;
+  font-size: 1.6em;
+  padding-bottom: 20px;
   color: #EFEFEF;
 }
 
 h2 {
-  font-size: 30px;
+  font-size: 1.4em;
+  margin-top: 1em;
   color: $blue-text1;
 }
 
 h3 {
-  font-size: 16px;
+  font-size: 1.2em;
+  margin-top: 1em;
   color: $blue-text2;
 }
 
@@ -60,10 +66,6 @@ h3 {
   margin-right: auto;
 }
 
-.borderBottom {
-  border-bottom: $grey-feature-border 1px solid;
-}
-
 #keyFeatures {
   max-width: 1200px;
   margin-left: auto;
@@ -71,8 +73,7 @@ h3 {
 }
 
 .keyFeature {
-  @extend .borderBottom;
-  padding-bottom: 10px;
+  border-bottom: $grey-feature-border 1px solid;
   padding-top: 10px;
 
   .featureImage,
@@ -98,11 +99,45 @@ h3 {
   }
 }
 
+#howToStart {
+  position: relative;
+  padding-bottom: 200px;
+
+  p {
+    text-align: center;
+  }
+
+  .code {
+    text-align: center;
+    font-family: "Courier New", monospace;
+    background-color: $grey-alternate-background;
+    color: $white-text;
+    margin: auto;
+    max-width: 90%;
+  }
+
+  .linksBox {
+    display: flex;
+    justify-content: center;
+
+    a {
+      border: 1px solid white;
+      padding: 5px;
+      border-radius: 5px;
+      width: 100px;
+      color: $white-text;
+      text-decoration: none;
+      text-align: center;
+      margin: 20px;
+    }
+  }
+}
+
 //Two columns
 @media (min-width: $breakpoint) {
 
   h2 {
-    margin-top: 50px;
+    margin-bottom: 30px;
   }
 
   .keyFeature {
@@ -159,66 +194,34 @@ h3 {
 
 }
 
-#howToStart {
-  position: relative;
-  padding-bottom: 200px;
-
-  p {
-    text-align: center;
-  }
-
-  .code {
-    text-align: center;
-    font-family: "Courier New", monospace;
-    background-color: $grey-alternate-background;
-    color: $white-text;
-    margin: auto;
-    max-width: 90%;
-  }
-
-  .linksBox {
-    display: flex;
-    justify-content: center;
-
-    a {
-      border: 1px solid white;
-      padding: 5px;
-      border-radius: 5px;
-      width: 100px;
-      color: $white-text;
-      text-decoration: none;
-      text-align: center;
-      margin: 20px;
-    }
-  }
-}
-
 body:not(.mobile) {
-  h2 {
-    margin-top: 20px;
-  }
+  font-size: 14px;
+  line-height: 25px;
 
-  h3 {
-    margin-top: 10px;
+  #description {
+    width: 750px;
   }
 
   .keyFeature {
     text-align: left;
-    line-height: 25px;
+    padding-bottom: 10px;
+  }
+
+  .code {
+    width: 250px;
   }
 }
 
 body.mobile {
-  h2 {
-    margin-top: 100px;
-  }
-
-  h3 {
-    margin-top: 30px;
-  }
+  font-size: 38px;
+  line-height: 56px;
 
   .keyFeature {
     text-align: center;
-    line-height: 56px;
+    padding-bottom: 70px;
+  }
+
+  .featureImage {
+    margin-top: 70px;
   }
 }
