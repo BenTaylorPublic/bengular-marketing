@@ -119,16 +119,17 @@ h3 {
   .linksBox {
     display: flex;
     justify-content: center;
+    padding-top: 20px;
 
     a {
       border: 1px solid white;
       padding: 5px;
       border-radius: 5px;
-      width: 100px;
       color: $white-text;
       text-decoration: none;
       text-align: center;
-      margin: 20px;
+      margin-left: 9px;
+      margin-right: 9px;
     }
   }
 }
@@ -210,6 +211,10 @@ body:not(.mobile) {
   .code {
     width: 250px;
   }
+
+  .linksBox a {
+    width: 100px;
+  }
 }
 
 body.mobile {
@@ -223,5 +228,9 @@ body.mobile {
 
   .featureImage {
     margin-top: 70px;
+  }
+
+  .linksBox a {
+    width: 250px;
   }
 }
