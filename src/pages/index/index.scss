@@ -9,8 +9,9 @@ $blue-text2: #5067C2;
 //Sizing
 $keyFeatureHeight: 250px;
 $keyFeatureWidth: 500px;
-$bodyMargin: 8px;
-$breakpoint: 2*$keyFeatureWidth + 2*$bodyMargin;
+$bodyMargin: 16px;
+$leeway: 200px;
+$breakpoint: 2*$keyFeatureWidth + 2*$bodyMargin - $leeway;
 
 //Content
 body {
@@ -78,16 +79,17 @@ h3 {
 
   .featureImage,
   .featureDescription {
-    min-width: $keyFeatureWidth;
     position: relative;
   }
 
   .featureDescription {
     margin-right: 10px;
     margin-left: 10px;
+    min-width: $keyFeatureWidth - $leeway;
   }
 
   .featureImage {
+    min-width: $keyFeatureWidth;
     min-height: $keyFeatureHeight;
 
     img {
