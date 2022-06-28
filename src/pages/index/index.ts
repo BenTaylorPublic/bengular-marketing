@@ -1,5 +1,4 @@
 class IndexView {
-    private static isMobile: boolean = false;
 
     public static initialize(): void {
         this.detectMobiles();
@@ -14,8 +13,6 @@ class IndexView {
         if (toMatch.some((toMatchItem) => {
             return navigator.userAgent.match(toMatchItem);
         })) {
-            //Conditional script here
-            this.isMobile = true;
             document.body.classList.add("mobile");
         }
     }
